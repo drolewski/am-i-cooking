@@ -44,7 +44,7 @@ export default function Home() {
 
                 <main className="flex flex-col items-center">
                     <Image
-                        src="/Designer.ico"
+                        src="/Designer.png"
                         alt="Am I Cooking?"
                         width={180}
                         height={38}
