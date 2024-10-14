@@ -1,6 +1,14 @@
 const handler = async (req: Request) => {
-    if (req.method === 'GET') {
+    // TODO get dishes from internet with given categories https://www.tasteatlas.com/best/foods-by-categor use cheerios
+    // TODO get recipes from GCP
+    // TODO store recipes in db
+    // TODO generate list of products to buy :) (all from gcp ;) )
+
+    if (req.method === 'POST') {
         // TODO get from db
+        const {dishes}: {dishes: string} = await req.json();
+
+        console.log(dishes);
 
         return new Response(
             JSON.stringify({name: 'Spaghetti Carbonara'}), {
@@ -16,4 +24,4 @@ const handler = async (req: Request) => {
     }
 }
 
-export {handler as GET};
+export {handler as POST};
