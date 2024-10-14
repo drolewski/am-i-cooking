@@ -12,6 +12,6 @@ export const removeDishes = () => {
 }
 
 export const getDishes = (): string[] => {
-    const dishesString: string = JSON.parse(localStorage.getItem(dishesKey)) ?? undefined;
+    const dishesString: string = JSON.parse(localStorage.getItem(dishesKey));
     return dishesString?.split(";") ?? [];
 }
